@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="testApp1">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title ng-controller="MainCtrl as mctrl">{{mctrl.name}}</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <div class="page-header">
+            <h3>Task Tracker</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <form novalidate name="myform">
+            <h4>Create a Task</h4>
+            <div class="form-group">
+                <label for="taskname">Task Name</label>
+                <input type="text" class="form-control" id="taskname">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="text" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+                <label for="assigned">Assigned To</label>
+                <input type="text" id="assigned" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-5">
+        <h4>Existing Task</h4>
+        <table class="table table-striped" ng-controller="MainCtrl as mctrl">
+            <tr ng-repeat="u in mctrl.details">
+                <td>{{u.name}}</td>
+                <td>{{u.date}}</td>
+                <td>{{u.assigned}}</td>
+            </tr>
+        </table>
+        </div>
+    <div class="col-md-1"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+<script src="app1.js"></script>
+</body>
+</html>
