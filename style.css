@@ -4,3 +4,14 @@
     color: white;
     background-color: black;
 }
+
+.errors {
+    color:red;
+    font-size: 0.9em;
+    margin-left: 100px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
