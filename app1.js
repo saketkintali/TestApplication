@@ -4,7 +4,7 @@
 
 ( function(){
 
-    var app = angular.module('testApp1', []);
+    var app = angular.module('testApp1', ['ngMessages']);
     app.controller('MainCtrl', MainController);
 
     function MainController() {
@@ -25,9 +25,12 @@
             {"name": "Test Task #7", "date": "12/07/2012", "assigned": "John Doe" }
 
         ];
-    }
 
-
+mctrl.addPerson = function() {
+    mctrl.details.push(mctrl.newPerson);
+    mctrl.newPerson = null;
+};
+}
 
 
 })();
